@@ -3,17 +3,51 @@
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorate="~{layout/layout}">
 <head>
-<title>Formulário de Evento</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Formulário de Evento</title>
+
+    <nav>
+        <div class="nav-wrapper">
+            <div class="card-panel teal lighten-2"><h5>CADASTRO DE EVENTOS</h5>
+                <!--<a href="" class="brand-logo">Lista de Eventos</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="">sass</a></li>
+                    <li><a href="">sass <span class="new badge">4</span></a></li>
+                    <li><a href="">sass</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
 </head>
 <body>
-        <h1>Formulário de Evento</h1>
-        <form method="post">
-            <p>Nome: <input type="text" value="" name="nome"/></p>
-            <p>Descrição: <input type="text" value="" name="descricao" /></p>
-            <p>Data: <input type="date" value="" name="data" /></p>
-            <p>Local: <input type="text" value="" name="local" /></p>
-            <p>Preço: <input type="text" value="" name="preco" /></p>
-            <p><button type="submit">Salvar</button></p>
+        </br>
+        <h3><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons right">list</i>Lista de Eventos</a></h3>
+        <form class="container" method="post">
+            <div class="row">
+                <div class="input-field col s12">
+                    <p>Nome: <input type="text" value="" name="nome"/></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <p>Local: <input type="text" value="" name="local" /></p>
+                </div>
+                <div class="input-field col s3">
+                    <p>Data: <input type="date" value="" name="data" /></p>
+                </div>
+                <div class="input-field col s3">
+                    <p>Horário: <input type="text" value="" name="horario" /></p>
+                </div>
+            </div>
+
+
+            <p><button class="waves-effect waves-light btn" type="submit">Salvar</button></p>
         </form>
 </body>
 
