@@ -1,11 +1,9 @@
 package com.fotopoint.fotopointapp.models;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Evento implements Serializable {
@@ -14,10 +12,17 @@ public class Evento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @NotEmpty
     private String nome;
+    @NotEmpty
     private String data;
+    @NotEmpty
     private String local;
+    @NotEmpty
     private String horario;
+    @OneToMany( mappedBy="evento", cascade=CascadeType.ALL, orphanRemoval=true)
+    private List<Convidado> convidados;
 
     public Evento() {
     }
